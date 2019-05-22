@@ -2,6 +2,7 @@
 
 namespace SensioLabs\Connect\Tests\Api\Parser;
 
+use PHPUnit\Framework\TestCase;
 use SensioLabs\Connect\Api\Parser\VndComSensiolabsConnectXmlParser;
 use SensioLabs\Connect\Api\Entity\Root;
 use SensioLabs\Connect\Api\Entity\Index;
@@ -13,7 +14,7 @@ use SensioLabs\Connect\Api\Entity\Badge;
 /**
  * @author Julien Galenski <julien.galenski@sensio.com>
  */
-class VndComSensiolabsConnectXmlParserTest extends \PHPUnit_Framework_TestCase
+class VndComSensiolabsConnectXmlParserTest extends TestCase
 {
     private $parser;
 
@@ -118,16 +119,16 @@ class VndComSensiolabsConnectXmlParserTest extends \PHPUnit_Framework_TestCase
         $this->assertInstanceOf('SensioLabs\Connect\Api\Model\Form', $form);
         $options = array(
             'type' => array(
-                 10 => 'Symfony2 Web Project',
-                 11 => 'symfony1 Web Project',
-                 9 => 'Silex Web Project',
-                 8 => 'Laravel Web Project',
-                 2 => 'Symfony2 Bundle',
-                 4 => 'symfony1 Plugin',
-                 7 => 'Drupal Module',
-                 0 => 'PHP Web Project',
-                 1 => 'PHP Library',
-                 6 => 'Other',
+                10 => 'Symfony2 Web Project',
+                11 => 'symfony1 Web Project',
+                9 => 'Silex Web Project',
+                8 => 'Laravel Web Project',
+                2 => 'Symfony2 Bundle',
+                4 => 'symfony1 Plugin',
+                7 => 'Drupal Module',
+                0 => 'PHP Web Project',
+                1 => 'PHP Library',
+                6 => 'Other',
             ),
             'isPrivate' => array(
                 1 => 'Private',
@@ -156,6 +157,6 @@ class VndComSensiolabsConnectXmlParserTest extends \PHPUnit_Framework_TestCase
         );
 
         $this->assertInstanceOf('SensioLabs\Connect\Api\Model\Error', $error);
-        $this->assertSame($expectedFields , $error->getEntityBodyParameters());
+        $this->assertSame($expectedFields, $error->getEntityBodyParameters());
     }
 }
