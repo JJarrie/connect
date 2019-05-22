@@ -16,7 +16,6 @@ namespace SensioLabs\Connect\Api\Entity;
  *
  * @author Marc Weistroff <marc.weistroff@sensiolabs.com>
  * @todo Override setApi to apply it to children User
- * @deprecated since Connect 4.2.4, will be removed in 5.0.
  */
 class Project extends AbstractEntity
 {

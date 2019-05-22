@@ -2,13 +2,12 @@
 
 namespace SensioLabs\Connect\Tests\Bridge\Symfony\Form;
 
-use PHPUnit\Framework\TestCase;
 use SensioLabs\Connect\Api\Model\Error;
 use SensioLabs\Connect\Bridge\Symfony\Form\ErrorTranslator;
 use SensioLabs\Connect\Exception\ApiClientException;
 use Symfony\Component\Form\Forms;
 
-class ErrorTranslatorTest extends TestCase
+class ErrorTranslatorTest extends \PHPUnit_Framework_TestCase
 {
     private $errorTranslator;
     private $formFactory;
@@ -80,9 +79,7 @@ class ErrorTranslatorTest extends TestCase
 
         $form = $this->formBuilder->add('foo')->getForm();
 
-        $form = $this->errorTranslator->translate($form, $exception, array('bar' => function ($form) {
-            return $form->get('foo');
-        }));
+        $form = $this->errorTranslator->translate($form, $exception, array('bar' => function ($form) { return $form->get('foo'); }));
 
         $this->assertCount(0, $form->getErrors());
         $this->assertCount(1, $form->get('foo')->getErrors());
@@ -101,9 +98,7 @@ class ErrorTranslatorTest extends TestCase
 
         $form = $this->formBuilder->add('foo')->getForm();
 
-        $this->errorTranslator->translate($form, $exception, array('bar' => function ($form) {
-            return;
-        }));
+        $this->errorTranslator->translate($form, $exception, array('bar' => function ($form) { return; }));
     }
 
     public function testTranslateWithEmptyError()

@@ -15,7 +15,6 @@ namespace SensioLabs\Connect\Api\Entity;
  * Club
  *
  * @author Marc Weistroff <marc.weistroff@sensiolabs.com>
- * @deprecated since Connect 4.2.4, will be removed in 5.0.
  */
 class Club extends AbstractEntity
 {

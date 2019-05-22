@@ -2,7 +2,6 @@
 
 namespace SensioLabs\Connect\Tests\Api\Entity;
 
-use PHPUnit\Framework\TestCase;
 use SensioLabs\Connect\Api\Entity\Project;
 
 /**
@@ -10,7 +9,7 @@ use SensioLabs\Connect\Api\Entity\Project;
  *
  * @author Marc Weistroff <marc.weistroff@sensiolabs.com>
  */
-class ProjectTest extends TestCase
+class ProjectTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetTypeFromTextual()
     {

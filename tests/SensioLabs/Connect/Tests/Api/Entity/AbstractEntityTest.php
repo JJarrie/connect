@@ -2,7 +2,6 @@
 
 namespace SensioLabs\Connect\Tests\Api\Entity;
 
-use PHPUnit\Framework\TestCase;
 use SensioLabs\Connect\Api\Entity\AbstractEntity;
 
 /**
@@ -10,7 +9,7 @@ use SensioLabs\Connect\Api\Entity\AbstractEntity;
  *
  * @author Marc Weistroff <marc.weistroff@sensiolabs.com>
  */
-class AbstractEntityTest extends TestCase
+class AbstractEntityTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {

@@ -18,6 +18,9 @@ namespace SensioLabs\Connect\Api\Entity;
  */
 class Root extends AbstractEntity
 {
+    private $indexes = array();
+    private $user;
+
     protected function configure()
     {
         $this->addProperty('projectsUrl')
@@ -28,17 +31,11 @@ class Root extends AbstractEntity
         ;
     }
 
-    /**
-     * @deprecated since Connect 4.2.4, will be removed in 5.0.
-     */
     public function getLastProjects()
     {
         return $this->getApi()->get($this->getProjectsUrl());
     }
 
-    /**
-     * @deprecated since Connect 4.2.4, will be removed in 5.0.
-     */
     public function searchProjects($q)
     {
         $form = $this->getForm('search_projects');
@@ -47,9 +44,6 @@ class Root extends AbstractEntity
         return $this->submit('search_projects');
     }
 
-    /**
-     * @deprecated since Connect 4.2.4, will be removed in 5.0.
-     */
     public function getProject($uuid)
     {
         return $this->getApi()->get($this->getProjectsUrl().'/'.$uuid);
@@ -83,17 +77,11 @@ class Root extends AbstractEntity
         return $this->getApi()->get($this->getUsersUrl().'/'.$uuid);
     }
 
-    /**
-     * @deprecated since Connect 4.2.4, will be removed in 5.0.
-     */
     public function getLastClubs()
     {
         return $this->getApi()->get($this->getClubsUrl());
     }
 
-    /**
-     * @deprecated since Connect 4.2.4, will be removed in 5.0.
-     */
     public function searchClubs($q)
     {
         $form = $this->getForm('search_clubs');
@@ -102,9 +90,6 @@ class Root extends AbstractEntity
         return $this->submit('search_clubs');
     }
 
-    /**
-     * @deprecated since Connect 4.2.4, will be removed in 5.0.
-     */
     public function getClub($uuid)
     {
         return $this->getApi()->get($this->getClubsUrl().'/'.$uuid);
