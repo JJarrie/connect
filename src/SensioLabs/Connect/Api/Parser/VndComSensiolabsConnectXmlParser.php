@@ -191,6 +191,9 @@ class VndComSensiolabsConnectXmlParser implements ParserInterface
         }
     }
 
+    /**
+     * @deprecated since Connect 4.2.4, will be removed in 5.0.
+     */
     protected function parseDoapProject(\DOMElement $element)
     {
         $project = $this->getProjectInstance($this->getLinkToSelf($element), $this->getLinkToAlternate($element));
@@ -512,6 +515,9 @@ class VndComSensiolabsConnectXmlParser implements ParserInterface
         return new User($self, $alternate);
     }
 
+    /**
+     * @deprecated since Connect 4.2.4, will be removed in 5.0.
+     */
     protected function getProjectInstance($self, $alternate)
     {
         return new Project($self, $alternate);

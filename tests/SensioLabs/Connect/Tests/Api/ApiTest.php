@@ -12,6 +12,7 @@
 namespace SensioLabs\Connect\Test\Api;
 
 use Buzz\Message\Response;
+use PHPUnit\Framework\TestCase;
 use SensioLabs\Connect\Api\Api;
 
 /**
@@ -19,7 +20,7 @@ use SensioLabs\Connect\Api\Api;
  *
  * @author Julien Galenski <julien.galenski@gmail.com>
  */
-class ApiTest extends \PHPUnit_Framework_TestCase
+class ApiTest extends TestCase
 {
     private $api;
     private $parser;
