@@ -14,7 +14,8 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "kriswallsmith/buzz": ">=0.8,<0.17",
+        "ext-json": "*",
+        "kriswallsmith/buzz": "^0.16.1",
         "psr/log": "^1.0"
     },
     "require-dev": {
