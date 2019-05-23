@@ -11,8 +11,6 @@
 
 namespace SensioLabs\Connect\Api\Entity;
 
-use Symfony\Bridge\Twig\TwigEngine;
-
 @trigger_error(sprintf('The "%s" class is deprecated since Connect 4.3 and will be removed in 5.0.', Club::class), E_USER_DEPRECATED);
 
 /**
