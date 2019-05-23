@@ -13,6 +13,7 @@
         }
     ],
     "require": {
+        "php": ">=5.5.9",
         "kriswallsmith/buzz": ">=0.8,<0.17",
         "psr/log": "^1.0"
     },
