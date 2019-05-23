@@ -192,10 +192,12 @@ class VndComSensiolabsConnectXmlParser implements ParserInterface
     }
 
     /**
-     * @deprecated since Connect 4.2.4, will be removed in 5.0.
+     * @deprecated since Connect 4.3 and will be removed in 5.0.
      */
     protected function parseDoapProject(\DOMElement $element)
     {
+        @trigger_error(sprintf('The "%s()" method is deprecated since Connect 4.3 and will be removed in 5.0.', __METHOD__), E_USER_DEPRECATED);
+
         $project = $this->getProjectInstance($this->getLinkToSelf($element), $this->getLinkToAlternate($element));
 
         $project->setUuid($element->attributes->getNamedItem('id')->value);
@@ -516,10 +518,12 @@ class VndComSensiolabsConnectXmlParser implements ParserInterface
     }
 
     /**
-     * @deprecated since Connect 4.2.4, will be removed in 5.0.
+     * @deprecated since Connect 4.3 and will be removed in 5.0.
      */
     protected function getProjectInstance($self, $alternate)
     {
+        @trigger_error(sprintf('The "%s()" method is deprecated since Connect 4.3 and will be removed in 5.0.', __METHOD__), E_USER_DEPRECATED);
+
         return new Project($self, $alternate);
     }
 }
