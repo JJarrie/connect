@@ -9,6 +9,7 @@ use SensioLabs\Connect\Api\Entity\Project;
  * ProjectTest.
  *
  * @author Marc Weistroff <marc.weistroff@sensiolabs.com>
+ * @group legacy
  */
 class ProjectTest extends TestCase
 {
